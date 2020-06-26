@@ -10,8 +10,8 @@ class Stats:
     def __init__(self, src):
         _src = src.copy()
         src = {}
-        for k in _src:
-            src[k.lower()] = _src[k]
+        for k,v in _src.items():
+            src[k.lower()] = v
 
         self._src = src
 
@@ -44,8 +44,8 @@ class Ranks:
     def __init__(self, src):
         _src = src.copy()
         src = {}
-        for k in _src:
-            src[k.lower().replace("rank_", "")] = _src[k]
+        for k,v in _src.items():
+            src[k.lower().replace("rank_", "")] = v
 
         self._src = src
 
